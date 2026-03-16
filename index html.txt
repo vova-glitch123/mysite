@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Basketball Nike Shop</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f3f3f3;
+}
+
+header{
+background:black;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:450px;
+background:url("https://images.unsplash.com/photo-1546519638-68e109498ffc") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:60px;
+font-weight:bold;
+}
+
+.section{
+padding:50px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+overflow:hidden;
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card h3{
+margin:10px;
+}
+
+.price{
+color:red;
+font-weight:bold;
+font-size:18px;
+}
+
+button{
+background:black;
+color:white;
+border:none;
+padding:10px 20px;
+margin:15px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#333;
+}
+
+.cart{
+position:fixed;
+right:20px;
+bottom:20px;
+background:black;
+color:white;
+padding:15px 20px;
+border-radius:10px;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+<script>
+
+let cart = 0;
+
+function addToCart(){
+cart++;
+document.getElementById("cart-count").innerText = cart;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Nike Basketball Shop</h2>
+
+<nav>
+<a href="#">Главная</a>
+<a href="#">Кроссовки</a>
+<a href="#">Одежда</a>
+<a href="#">Контакты</a>
+</nav>
+
+</header>
+
+<div class="hero">
+Basketball Collection
+</div>
+
+<div class="section">
+
+<h2>Баскетбольные кроссовки</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+<h3>Nike LeBron</h3>
+<p class="price">$180</p>
+<button onclick="addToCart()">В корзину</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a">
+<h3>Nike KD</h3>
+<p class="price">$170</p>
+<button onclick="addToCart()">В корзину</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c">
+<h3>Nike Kyrie</h3>
+<p class="price">$160</p>
+<button onclick="addToCart()">В корзину</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Одежда</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520975922323-1d4a5d43b24b">
+<h3>Basketball T-Shirt</h3>
+<p class="price">$40</p>
+<button onclick="addToCart()">В корзину</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+<h3>Basketball Hoodie</h3>
+<p class="price">$80</p>
+<button onclick="addToCart()">В корзину</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514996937319-344454492b37">
+<h3>Basketball Shorts</h3>
+<p class="price">$50</p>
+<button onclick="addToCart()">В корзину</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="cart">
+Корзина: <span id="cart-count">0</span>
+</div>
+
+<footer>
+© 2026 Nike Basketball Fan Shop
+</footer>
+
+</body>
+</html>
